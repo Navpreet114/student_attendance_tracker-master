@@ -5,7 +5,7 @@ exports.getHome = async (req, res) =>{
     try {
         const students = await StudentRecord.find({});
 
-        const maxAttendanceCount = students ? students.attendance.length : 0;
+        const maxAttendanceCount = students ? students.length : 0;
 
         console.log(maxAttendanceCount);
 
